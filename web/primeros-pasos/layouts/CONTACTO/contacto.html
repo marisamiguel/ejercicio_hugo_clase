@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+<main>
+	<div class="post">
+		{{ partial "single/post-info.html" . }}
+		{{ partial "single/title.html" . }}
+
+		{{ partial "single/header.html" . }}
+
+		
+
+		<!-- modify this form HTML and place wherever you want your form -->
+		<form action="https://formspree.io/f/mwkayabw" method="POST">
+			<label>
+				Your email:
+				<input type="email" name="_replyto">
+			</label>
+			<label>
+				Your message:
+				<textarea name="message"></textarea>
+			</label>
+			<!-- your other form fields go here -->
+			<button type="submit">Send</button>
+		</form>
+
+		{{ .Content }}
+
+		{{ partial "single/footer.html" . }}
+	</div>
+
+
+</main>
+
+{{ end }}
